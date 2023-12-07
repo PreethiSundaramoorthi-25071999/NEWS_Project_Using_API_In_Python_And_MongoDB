@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Login Page for NEWS API</title>
+</head>
+<body>
+    <img src="../static/images/news pic.jpg" alt="" class="image" height="700px" width="100%">
+    <h3 class="head">WELCOME TO NEWS API</h3>
+    <form method="post" class="form1">
+        <label for="Name">Name</label>
+        <input type="text" name="Name"><br><br>
+    
+        <label for="Password">Password</label>
+        <input type="text" name="Password"><br><br>      
+    
+        <input type="submit" value="Signin">
+    </form><br><br>
+    <div class="newuser"><button><a href="{{url_for('newuser')}}">Not an User?</a></button></div>
+</body>
+</html>

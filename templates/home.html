@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>News Headlines</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <h1>Top Headlines</h1>
+    <div class="logout"><button><a href="{{url_for('logout')}}">Logout</a></button></div>
+    <form method="GET" action="/search">
+        <input type="text" name="query" placeholder="Enter a country name">
+        <input type="submit" value="Search">
+    </form>
+    <ul>
+        {%for i in articles%}
+        <li>
+            <h2>{{i.title}}</h2>
+            <p>{{i.description}}</p>
+            <a href="{{i.url}}" target="blank">Read more</a>
+        </li>
+        {%endfor%}
+    </ul>
+</body>
+
+</html>
